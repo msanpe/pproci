@@ -1,0 +1,3279 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/MUIA/pproci#"
+     xml:base="http://www.semanticweb.org/MUIA/pproci"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:pproci="http://www.semanticweb.org/MUIA/pproci#"
+     xmlns:public-contracts="http://purl.org/procurement/public-contracts#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/MUIA/pproci">
+        <owl:imports rdf:resource="http://contsem.unizar.es/def/sector-publico/pproc#"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#contracted_organization -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#contracted_organization">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <rdfs:label xml:lang="en">Contracted organization</rdfs:label>
+        <rdfs:label xml:lang="es">Organización contratada</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_amount -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_amount">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <rdfs:range rdf:resource="http://contsem.unizar.es/def/sector-publico/pproc#BundlePriceSpecification"/>
+        <rdfs:label xml:lang="en">Invoice amount</rdfs:label>
+        <rdfs:label xml:lang="es">Total de la factura</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_modification_conditions -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_modification_conditions">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_modification_conditions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_of_contract -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_of_contract">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/procurement/public-contracts#Contract"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <rdfs:label xml:lang="es">Factura del contrato</rdfs:label>
+        <rdfs:label xml:lang="en">Invoice of contract</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#billing_period -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#billing_period">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <rdfs:label xml:lang="en">Billing period</rdfs:label>
+        <rdfs:label xml:lang="es">Ejercicio</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#cif -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#cif">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <rdfs:label xml:lang="en">CIF</rdfs:label>
+        <rdfs:label xml:lang="es">CIF</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#currency -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#currency">
+        <rdfs:domain rdf:resource="http://contsem.unizar.es/def/sector-publico/pproc#BundlePriceSpecification"/>
+        <rdfs:label xml:lang="en">Currency</rdfs:label>
+        <rdfs:label xml:lang="es">Divisa</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#currency_value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#currency_value">
+        <rdfs:domain rdf:resource="http://contsem.unizar.es/def/sector-publico/pproc#BundlePriceSpecification"/>
+        <rdfs:label xml:lang="es">Cantidad de divisa</rdfs:label>
+        <rdfs:label xml:lang="en">Currency value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#date_of_issue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#date_of_issue">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#date_of_payment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#date_of_payment">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#electronic_invoice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#electronic_invoice">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <rdfs:label xml:lang="en">Electronic invoice</rdfs:label>
+        <rdfs:label xml:lang="es">Factura electronica</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_modifications -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_modifications">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_modification_conditions"/>
+        <rdfs:label xml:lang="en">Invoice modifications</rdfs:label>
+        <rdfs:label xml:lang="es">Modificaciones de la factura</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_status -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_status">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <rdfs:label xml:lang="es">Estado de la factura</rdfs:label>
+        <rdfs:label xml:lang="en">Invoice status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_title">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <rdfs:label xml:lang="en">Invoice title</rdfs:label>
+        <rdfs:label xml:lang="es">Título de la factura</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_uri -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_uri">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <rdfs:label xml:lang="en">Invoice URI</rdfs:label>
+        <rdfs:label xml:lang="es">URI de la factura</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#organization_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#organization_id">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <rdfs:label xml:lang="es">ID de la organización</rdfs:label>
+        <rdfs:label xml:lang="en">Organization ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#organization_title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#organization_title">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <rdfs:label xml:lang="en">Organization title</rdfs:label>
+        <rdfs:label xml:lang="es">Título de la organización</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#organization_uri -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#organization_uri">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <rdfs:label xml:lang="en">Organization URI</rdfs:label>
+        <rdfs:label xml:lang="es">URI de la organización</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice">
+        <rdfs:label xml:lang="es">factura</rdfs:label>
+        <rdfs:label xml:lang="en">invoice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_modification_conditions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_modification_conditions"/>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#55967 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#55967">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MOLDE ESCAYOLA CANTERO TORRERO</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/55967.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#55967/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#55967/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#55967"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25209</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JUNTA MUNICIPAL TORRERO</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/25209</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#55967/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#55967/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#55967"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">180833</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ALFREDO BUENO SALINAS BUENO SALINAS</organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#55967/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#55967/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#55967"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">96.8</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#55967/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#55967/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#55967"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-03-19T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2016-03-07T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#57182 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#57182">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Certificación nº 7 Conservación y Mantenimiento Alumbrado Público Zona III periodo 01/01/2014 al 31/01/2014</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/57182.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#57182/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#57182/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#57182"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61297</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIO DE NUEVAS ACTUACIONES EN VIARIOS</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/61297</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#57182/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#57182/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#57182"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B50575349</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35040</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CERMA-ARRIAXA-SL </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#57182/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#57182/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#57182"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">147681.4</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#57182/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#57182/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#57182"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-05-28T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-19T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#58712 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#58712">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GAS MAYO CENTROS DEPORTIVOS</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/58712.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#58712/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#58712/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#58712"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23960</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIPAMIENTOS INSTALACIONES</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/23960</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#58712/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#58712/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#58712"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A61797536</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">971784</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GAS-NATURAL-COMERCIALIZADORA-SA </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#58712/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#58712/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#58712"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16551.46</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#58712/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#58712/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#58712"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-06-12T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-16T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#59735 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#59735">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REPARACION FRIGORIFICO BOTIQUIN SEMINARIO</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/59735.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#59735/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#59735/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#59735"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20247</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIO DE PREVENCIÓN Y SALUD LABORAL</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/20247</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#59735/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#59735/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#59735"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A50687268</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22398</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERZAN-ZEC-SAL </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#59735/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#59735/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#59735"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">47.8</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#59735/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#59735/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#59735"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-06-23T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-12-03T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#60594 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#60594">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Obras reparac.cubierta, limpieza, desescombrado en Minas num. 2-2º piso Exp. 433150/09</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/60594.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#60594/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#60594/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#60594"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23660</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SER.INSPECCIÓN URBANÍSTICA</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/23660</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#60594/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#60594/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#60594"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B44100170</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">97157</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONSTRUCC-EXCAV-LECHA-SL </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#60594/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#60594/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#60594"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">28195.25</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#60594/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#60594/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#60594"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-07-17T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-23T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#61177 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#61177">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIOS DE MANTENIMIENTO EN EL CDM JOSÉ GARCÉS - JUNIO 2014</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/61177.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#61177/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#61177/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#61177"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20231</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIO DE INSTALACIONES DEPORTIVAS</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/20231</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#61177/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#61177/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#61177"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A28517308</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11332</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EULEN-SA </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#61177/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#61177/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#61177"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52142.64</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#61177/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#61177/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#61177"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-06-30T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-04-22T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#61736 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#61736">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACOMPAÑAMIENTO MUSICAL EN PLAZA SANTO DOMINGO  4-4-2014</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/61736.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#61736/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#61736/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#61736"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61278</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S. SOCIALES COMUNITARIOS</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/61278</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#61736/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#61736/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#61736"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G50795525</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">183680</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ASOCIACION CULTURAL FAGÜEÑO </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#61736/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#61736/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#61736"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">300.0</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#61736/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#61736/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#61736"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-04-04T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2016-01-19T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#62979 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#62979">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVIDAD FINANCIACIÓN PROYECTOS EN ZARAGOZA ACTIVA</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/62979.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#62979/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#62979/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#62979"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61290</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZARAGOZA ACTIVA</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/61290</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#62979/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#62979/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#62979"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F58396524</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">184333</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COOP57, SCCL. </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#62979/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#62979/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#62979"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#62979/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#62979/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#62979"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-08-30T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-07-14T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#63811 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#63811">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ELECTRICIDAD AGOSTO FUENTES ORNAMENTALES</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/63811.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#63811/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#63811/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#63811"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23960</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIPAMIENTOS INSTALACIONES</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/23960</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#63811/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#63811/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#63811"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A61797536</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">971784</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GAS-NATURAL-COMERCIALIZADORA-SA </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#63811/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#63811/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#63811"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20788.49</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#63811/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#63811/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#63811"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-09-12T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-28T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#64685 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#64685">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R.O. CTL LA SABINA AGOSTO 2014</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/64685.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#64685/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#64685/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#64685"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61278</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S. SOCIALES COMUNITARIOS</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/61278</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#64685/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#64685/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#64685"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F50867803</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17753</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PRIDES- COOPERATIVA </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#64685/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#64685/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#64685"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9840.7</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#64685/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#64685/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#64685"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-08-31T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-09T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#64983 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#64983">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CERTIFICACIÓN Nº13 CONSERVACIÓN Y MANTENIMIENTO ALUMBRADO PÚBLICO ZONA III PERÍODO 01/08/14 A 31/09/14</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/64983.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#64983/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#64983/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#64983"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61297</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIO DE NUEVAS ACTUACIONES EN VIARIOS</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/61297</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#64983/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#64983/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#64983"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B50575349</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35040</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CERMA-ARRIAXA-SL </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#64983/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#64983/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#64983"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">300082.2</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#64983/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#64983/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#64983"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-10-14T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-05-15T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#65390 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#65390">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resto pendiente honorarios proyecto Parque de Oriente</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/65390.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#65390/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#65390/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#65390"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23845</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIO DE PARQUES Y JARDINES</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/23845</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#65390/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#65390/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#65390"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100087</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JUAN-ANTONIO ROS LASIERRA</organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#65390/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#65390/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#65390"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">23979.78</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#65390/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#65390/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#65390"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-09-18T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-06-18T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#65814 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#65814">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Convenio Postpago Ayto Zaragoza Semana 44 a 53 2013. Fijo pospago Ayto y Ztaxi (octubre-diciembre)</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/65814.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#65814/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#65814/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#65814"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61326</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIO DE CIUDAD INTELIGENTE</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/61326</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#65814/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#65814/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#65814"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B22330039</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">78956</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZEUMAT ZITYCARD SL </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#65814/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#65814/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#65814"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">29199.6</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#65814/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#65814/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#65814"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-01-08T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-23T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#65913 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#65913">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ELECTRICIDAD SEPTIEMBRE PABELLONES DEPORTIVOS</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/65913.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#65913/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#65913/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#65913"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23960</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIPAMIENTOS INSTALACIONES</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/23960</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#65913/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#65913/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#65913"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A61797536</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">971784</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GAS-NATURAL-COMERCIALIZADORA-SA </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#65913/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#65913/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#65913"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">59136.48</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#65913/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#65913/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#65913"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-10-15T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-28T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#65932 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#65932">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ELECTRICIDAD SEPTIEMBRE GENERAL</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/65932.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#65932/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#65932/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#65932"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23960</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIPAMIENTOS INSTALACIONES</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/23960</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#65932/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#65932/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#65932"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A61797536</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">971784</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GAS-NATURAL-COMERCIALIZADORA-SA </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#65932/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#65932/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#65932"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">97880.75</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#65932/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#65932/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#65932"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-10-15T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-28T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66617 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66617">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MATERIAL ESCOLAR</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/66617.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66617/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66617/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#66617"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25202</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JUNTA MUNICIPAL CENTRO</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/25202</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66617/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66617/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#66617"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">979135</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JESUS-LUIS CENTRO OTAL</organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66617/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66617/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#66617"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">151.96</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66617/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66617/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#66617"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-10-17T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-27T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66628 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66628">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MOVIMIENTO DE TIERRAS</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/66628.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66628/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66628/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#66628"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23740</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIO DE CONSERVACION DE INFRAESTRUCTURAS</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/23740</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66628/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66628/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#66628"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B50101864</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">139</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXCAVACIONES-GRASA-SL </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66628/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66628/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#66628"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12525.94</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66628/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66628/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#66628"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-10-31T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-15T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66633 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66633">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CURSO OPEN OFFICE. CALC AVANZADO. 2 EDICIONES</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/66633.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66633/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66633/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#66633"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24105</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CENTRO DE FORMACIÓN</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/24105</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66633/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66633/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#66633"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B50685825</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17702</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T-Z-FORMACION-SL </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66633/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66633/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#66633"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1350.0</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66633/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66633/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#66633"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-03T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-02T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66640 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66640">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34 ABONOS DEL TIPO MENSUAL 24 H. MES NOVIEMBRE 2014</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/66640.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66640/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66640/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#66640"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26037</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GABINETE DE ALCALDÍA</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/26037</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66640/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66640/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#66640"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A78666112</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6536</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ESTACIONAMIENTOS-DEL-PILAR-SA </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66640/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66640/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#66640"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3654.88</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66640/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66640/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#66640"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-01T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-12T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66698 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66698">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MANTENIMIENTO BACTERIOSTATICO SERV.SOCIALES</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/66698.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66698/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66698/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#66698"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61278</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S. SOCIALES COMUNITARIOS</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/61278</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66698/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66698/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#66698"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A50089812</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">372</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DROGUERIA Y LIMPIEZA S.A. </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66698/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66698/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#66698"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">222.83</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66698/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66698/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#66698"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-08-31T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-09T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66727 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66727">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MATERIAL HIGIENICO</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/66727.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66727/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66727/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#66727"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61278</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S. SOCIALES COMUNITARIOS</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/61278</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66727/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66727/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#66727"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A50089812</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">372</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DROGUERIA Y LIMPIEZA S.A. </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66727/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66727/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#66727"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">169.88</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66727/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66727/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#66727"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-09-30T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-09T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66788 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66788">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asistencia y revisión firmware servidores HP</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/66788.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66788/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66788/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#66788"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26017</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIO DE REDES Y SISTEMAS</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/26017</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66788/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66788/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#66788"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B50828649</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">45055</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DATEK-SISTEMAS-SL </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66788/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66788/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#66788"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3375.9</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66788/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66788/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#66788"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-04T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-02T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66873 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66873">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONCIERTO DE CORO Y ORGANO EN LA BASILICA DE SANTA ENGRACIA</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/66873.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66873/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66873/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#66873"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25202</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JUNTA MUNICIPAL CENTRO</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/25202</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66873/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66873/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#66873"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">186431</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MIQUEL GONZALEZ RUIZ</organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66873/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66873/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#66873"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">600.0</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#66873/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#66873/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#66873"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-10-29T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-27T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67035 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67035">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVIDADES PREVENCION ADICCIONES</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67035.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67035/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67035/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67035"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61278</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S. SOCIALES COMUNITARIOS</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/61278</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67035/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67035/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67035"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">75108</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OLMEDA FREIRE MIGUEL .</organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67035/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67035/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67035"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2970.0</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67035/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67035/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67035"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-03T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-02T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67061 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67061">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TALLER DE TAI CHI ULTIMO TRIMESTRE CC.DELICIAS</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67061.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67061/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67061/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67061"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60257</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OFICINA TECNICA DEL MAYOR</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/60257</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67061/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67061/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67061"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">62351</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DE BLAS DE MIGUEL JUAN ANTONIO .</organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67061/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67061/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67061"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">534.26</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67061/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67061/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67061"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-07T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-27T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67089 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67089">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TALLER INTERGENERACIONAL DE  MANUALIDADES PAPEL-PAPIROFLEXIA CC.DELICIAS </invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67089.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67089/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67089/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67089"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60257</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OFICINA TECNICA DEL MAYOR</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/60257</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67089/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67089/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67089"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">112051</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEBORA QUELLE GARCIA</organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67089/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67089/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67089"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">211.2</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67089/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67089/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67089"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-06T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-02T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67091 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67091">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apoyo votaciones Popyrock</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67091.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67091/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67091/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67091"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61283</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIO DE JUVENTUD</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/61283</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67091/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67091/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67091"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J50958529</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20682</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ALTABAN-SERVICIOS-SC </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67091/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67091/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67091"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">522.72</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67091/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67091/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67091"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-06T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-05T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67096 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67096">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MATERIAL DE FONTANERÍA PARA LA BRIGADA DE MANTENIMIENTO</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67096.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67096/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67096/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67096"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20231</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIO DE INSTALACIONES DEPORTIVAS</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/20231</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67096/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67096/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67096"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A50034404</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">270</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SANEAMIENTOS-ZARAGOZA-SA </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67096/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67096/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67096"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">347.44</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67096/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67096/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67096"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-10-25T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-13T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67158 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67158">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Impresión carteles y dipticos de los concursos de fotografía pintura y literario</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67158.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67158/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67158/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67158"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25201</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JUNTA MUNICIPAL CASCO HISTÓRICO</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/25201</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67158/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67158/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67158"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10672</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JESUS-J GONZALEZ GOMEZ</organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67158/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67158/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67158"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1252.35</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67158/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67158/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67158"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-04T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-05T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67274 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67274">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RENTA MONASTERIO DE OBARRA 2-4 NOVIEMBRE 2014</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67274.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67274/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67274/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67274"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26023</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIO DE PATRIMONIO. UNIDAD DE INVENTARIO Y PATRIMONIO</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/26023</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67274/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67274/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67274"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10979</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LUIS CANCER ALDEA</organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67274/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67274/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67274"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2585.15</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67274/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67274/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67274"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-02T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-05T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67295 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67295">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADQUISICION CONSUMIBLES INFORMATICA</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67295.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67295/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67295/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67295"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61238</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UNIDAD DE MANTENIMIENTO ORGANIZATIVO</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/61238</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67295/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67295/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67295"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B50570571</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10697</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SOLITIUM S.L. </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67295/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67295/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67295"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">31245.13</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67295/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67295/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67295"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-10-31T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-13T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67326 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67326">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrodos selectivos para realizar estudios en el laboratorio de la Planta Potabilizadora</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67326.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67326/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67326/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67326"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23780</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIO DE EXPLOTACIÓN DEL AGUA POTABLE</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/23780</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67326/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67326/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67326"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A28060283</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20408</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOMENSORO S.A. </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67326/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67326/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67326"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2348.61</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67326/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67326/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67326"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-10-16T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-09T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67470 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67470">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apoyo técnico Música en la red</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67470.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67470/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67470/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67470"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61283</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIO DE JUVENTUD</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/61283</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67470/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67470/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67470"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">91553</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LOPEZ IGLESIAS ERIC .</organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67470/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67470/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67470"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1649.99</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67470/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67470/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67470"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-11T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-14T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67471 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67471">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reparación mesas iluminación y Sonido Centros Cívicos Almozara y Delicias</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67471.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67471/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67471/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67471"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20119</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIO DE CENTROS CÍVICOS</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/20119</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67471/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67471/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67471"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B22156194</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">33144</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RAMPA-HUESCA-S.L. </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67471/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67471/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67471"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">726.0</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67471/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67471/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67471"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-06T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-02T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67493 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67493">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MATERIAL TALLERES CC.VALDEFIERRO</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67493.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67493/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67493/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67493"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60257</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OFICINA TECNICA DEL MAYOR</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/60257</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67493/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67493/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67493"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J50757434</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14934</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HERMANOS-BERNAL-SC </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67493/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67493/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67493"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">75.59</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67493/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67493/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67493"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-12T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-13T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67526 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67526">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TALLER DE ACTIVIDAD MENTAL ULTIMO TRIMESTRE CC.PEÑAFLOR</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67526.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67526/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67526/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67526"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60257</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OFICINA TECNICA DEL MAYOR</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/60257</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67526/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67526/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67526"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G50033349</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">705</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FUNDACION-LA-CARIDAD </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67526/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67526/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67526"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">324.0</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67526/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67526/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67526"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-11T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-13T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67528 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67528">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TALLER DE DANZATERAPIA ULTIMO TRIMESTRE CC.PEÑAFLOR</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67528.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67528/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67528/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67528"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60257</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OFICINA TECNICA DEL MAYOR</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/60257</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67528/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67528/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67528"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22695</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LUCIA REULA BAQUERO</organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67528/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67528/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67528"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">220.77</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67528/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67528/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67528"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-10T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-14T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67579 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67579">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TALLER DE YOGA ULTIMO TRIMESTRE CC.ESTACION DEL NORTE</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67579.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67579/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67579/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67579"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60257</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OFICINA TECNICA DEL MAYOR</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/60257</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67579/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67579/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67579"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F99042160</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">56263</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FISIOMENTALE-SOC-COOP </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67579/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67579/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67579"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">242.84</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67579/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67579/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67579"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-07T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-02T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67636 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67636">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TALLER DE JABONES,DECORADOS..., EN CASETAS,-PROGRAMACION-</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67636.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67636/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67636/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67636"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20119</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIO DE CENTROS CÍVICOS</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/20119</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67636/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67636/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67636"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G50820463</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17754</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ASOC-CULT-COFISA </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67636/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67636/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67636"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">175.0</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67636/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67636/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67636"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-10-31T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-09T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67662 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67662">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catering y Servicios de Hostelería en El Túnel</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67662.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67662/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67662/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67662"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61283</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIO DE JUVENTUD</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/61283</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67662/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67662/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67662"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B50355684</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">909754</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MARTEGRA-SL </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67662/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67662/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67662"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">424.6</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67662/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67662/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67662"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-12T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-14T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67663 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67663">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GASTOS FUNCIONAMIENTO GERENCIA</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67663.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67663/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67663/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67663"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23310</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SER. INFORMACIÓN Y ATENCIÓN AL CIUDADANO</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/23310</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67663/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67663/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67663"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">186545</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRANCISCO-JAVIER MONCLUS FRAGA</organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67663/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67663/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67663"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">255.0</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67663/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67663/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67663"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-10-29T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-30T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67674 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67674">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GASTOS FUNCIONAMIENTO GERENCIA</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67674.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67674/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67674/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67674"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23310</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SER. INFORMACIÓN Y ATENCIÓN AL CIUDADANO</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/23310</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67674/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67674/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67674"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">90961</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ANGEL PUEYO CAMPOS</organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67674/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67674/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67674"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">255.0</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67674/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67674/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67674"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-10-29T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-02-02T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67701 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67701">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENCUADERNACIÓN DE LIBROS.</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67701.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67701/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67701/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67701"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24100</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIO DE MODERNIZACION Y DESARROLLO ORGANIZATIVO</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/24100</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67701/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67701/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67701"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13113</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-MILAGRO COLERA BEAMONTE</organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67701/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67701/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67701"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">578.62</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67701/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67701/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67701"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-13T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-15T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67734 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67734">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Material ferreteria Centro Cívico Estación del Norte</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67734.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67734/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67734/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67734"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20119</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIO DE CENTROS CÍVICOS</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/20119</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67734/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67734/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67734"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">69869</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JOSE-L ESCRICHE FLETA</organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67734/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67734/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67734"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">251.25</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67734/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67734/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67734"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-11T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-14T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67839 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67839">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CONTRATO MENOR: TRTAMITA Nº 42948</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67839.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67839/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67839/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67839"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61337</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INSTITUTO MUNICIPAL DE SALUD PÚBLICA</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/61337</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67839/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67839/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67839"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A28060283</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20408</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOMENSORO S.A. </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67839/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67839/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67839"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">19085.33</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67839/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67839/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67839"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-10-27T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-09T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67856 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67856">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TECNICO SONIDO JORNADAS DE FLAMENCO</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67856.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67856/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67856/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67856"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61278</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S. SOCIALES COMUNITARIOS</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/61278</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67856/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67856/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67856"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B99271777</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">91554</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERGLOEVEN ARAGON S.L </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67856/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67856/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67856"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1161.6</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67856/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67856/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67856"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-06T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-02T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67862 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67862">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXP. 87.019/14 DAÑOS EN BIENES MUNICIPALES</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67862.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67862/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67862/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67862"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61287</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIO ADMINISTRATIVO DE SERVICIOS PÚBLICOS</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/61287</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67862/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67862/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67862"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A50004829</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IMESA </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67862/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67862/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67862"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1019.65</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67862/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67862/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67862"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-10-20T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-21T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67887 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67887">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Material ferreteria Centro Cívico La Jota</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67887.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67887/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67887/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67887"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20119</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SERVICIO DE CENTROS CÍVICOS</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/20119</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67887/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67887/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67887"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">69869</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JOSE-L ESCRICHE FLETA</organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67887/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67887/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67887"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.25</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67887/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67887/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67887"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-06T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-08T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67974 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67974">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COMPRA ZAPATILLAS SEGURIDAD OPERARIOS</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/67974.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67974/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67974/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#67974"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61238</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SECCION DE APOYO OPERATIVO</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/61238</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67974/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67974/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#67974"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B50349323</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1109</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C-R-CONFECCIONES-RAMOS-SL </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67974/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67974/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67974"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">337.83</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#67974/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#67974/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#67974"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-04T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-08T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#68000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#68000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <electronic_invoice rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</electronic_invoice>
+        <invoice_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paid</invoice_status>
+        <invoice_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXCURSION AL MATARRAÑA CC.REY FERNANDO</invoice_title>
+        <invoice_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.zaragoza.es/sede/servicio/factura/68000.json</invoice_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#68000/CA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#68000/CA">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <public-contracts:contractingAuthority rdf:resource="http://www.semanticweb.org/MUIA/pproci#68000"/>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60257</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OFICINA TECNICA DEL MAYOR</organization_title>
+        <organization_uri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.zaragoza.es/api/recurso/sector-publico/organismo/60257</organization_uri>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#68000/CO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#68000/CO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <contracted_organization rdf:resource="http://www.semanticweb.org/MUIA/pproci#68000"/>
+        <cif rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A04006706</cif>
+        <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1092</organization_id>
+        <organization_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VIAJES-CEMO-SA </organization_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#68000/IEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#68000/IEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <invoice_economic_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#68000"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euros</currency>
+        <currency_value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">400.0</currency_value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#68000/ITC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MUIA/pproci#68000/ITC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <invoice_temporal_conditions rdf:resource="http://www.semanticweb.org/MUIA/pproci#68000"/>
+        <billing_period rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014</billing_period>
+        <date_of_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-11-10T00:00:00Z</date_of_issue>
+        <date_of_payment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2015-01-14T00:00:00Z</date_of_payment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions">
+        <rdfs:label xml:lang="es">Condiciones económicas de la factura</rdfs:label>
+        <rdfs:label xml:lang="en">invoice economic conditions</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_modification_conditions">
+        <rdfs:label xml:lang="es">Condiciones de modificación de la factura</rdfs:label>
+        <rdfs:label xml:lang="en">invoice modification conditions</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions">
+        <rdfs:label xml:lang="en">Invoice temporal conditons</rdfs:label>
+        <rdfs:label xml:lang="es">Condiciones temporales de la factura</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+
