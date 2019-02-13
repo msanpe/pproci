@@ -1,0 +1,295 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/MUIA/pproci#"
+     xml:base="http://www.semanticweb.org/MUIA/pproci"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:pproci="http://www.semanticweb.org/MUIA/pproci#"
+     xmlns:public-contracts="http://purl.org/procurement/public-contracts#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/MUIA/pproci">
+        <owl:imports rdf:resource="http://contsem.unizar.es/def/sector-publico/pproc#"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#contracted_organization -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#contracted_organization">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <rdfs:label xml:lang="en">Contracted organization</rdfs:label>
+        <rdfs:label xml:lang="es">Organización contratada</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_amount -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_amount">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+        <rdfs:range rdf:resource="http://contsem.unizar.es/def/sector-publico/pproc#BundlePriceSpecification"/>
+        <rdfs:label xml:lang="en">Invoice amount</rdfs:label>
+        <rdfs:label xml:lang="es">Total de la factura</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_modification_conditions -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_modification_conditions">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_modification_conditions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_of_contract -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_of_contract">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/procurement/public-contracts#Contract"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <rdfs:label xml:lang="es">Factura del contrato</rdfs:label>
+        <rdfs:label xml:lang="en">Invoice of contract</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#billing_period -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#billing_period">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+        <rdfs:label xml:lang="en">Billing period</rdfs:label>
+        <rdfs:label xml:lang="es">Ejercicio</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#cif -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#cif">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <rdfs:label xml:lang="en">CIF</rdfs:label>
+        <rdfs:label xml:lang="es">CIF</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#currency -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#currency">
+        <rdfs:domain rdf:resource="http://contsem.unizar.es/def/sector-publico/pproc#BundlePriceSpecification"/>
+        <rdfs:label xml:lang="en">Currency</rdfs:label>
+        <rdfs:label xml:lang="es">Divisa</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#currency_value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#currency_value">
+        <rdfs:domain rdf:resource="http://contsem.unizar.es/def/sector-publico/pproc#BundlePriceSpecification"/>
+        <rdfs:label xml:lang="es">Cantidad de divisa</rdfs:label>
+        <rdfs:label xml:lang="en">Currency value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#date_of_issue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#date_of_issue">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#date_of_payment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#date_of_payment">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#electronic_invoice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#electronic_invoice">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <rdfs:label xml:lang="en">Electronic invoice</rdfs:label>
+        <rdfs:label xml:lang="es">Factura electronica</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_modifications -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_modifications">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice_modification_conditions"/>
+        <rdfs:label xml:lang="en">Invoice modifications</rdfs:label>
+        <rdfs:label xml:lang="es">Modificaciones de la factura</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_status -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_status">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <rdfs:label xml:lang="es">Estado de la factura</rdfs:label>
+        <rdfs:label xml:lang="en">Invoice status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_title">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <rdfs:label xml:lang="en">Invoice title</rdfs:label>
+        <rdfs:label xml:lang="es">Título de la factura</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_uri -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_uri">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MUIA/pproci#invoice"/>
+        <rdfs:label xml:lang="en">Invoice URI</rdfs:label>
+        <rdfs:label xml:lang="es">URI de la factura</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#organization_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#organization_id">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <rdfs:label xml:lang="es">ID de la organización</rdfs:label>
+        <rdfs:label xml:lang="en">Organization ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#organization_title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#organization_title">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <rdfs:label xml:lang="en">Organization title</rdfs:label>
+        <rdfs:label xml:lang="es">Título de la organización</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#organization_uri -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MUIA/pproci#organization_uri">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <rdfs:label xml:lang="en">Organization URI</rdfs:label>
+        <rdfs:label xml:lang="es">URI de la organización</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice">
+        <rdfs:label xml:lang="es">factura</rdfs:label>
+        <rdfs:label xml:lang="en">invoice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_economic_conditions"/>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_modification_conditions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_modification_conditions"/>
+    
+
+
+    <!-- http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/MUIA/pproci#invoice_temporal_conditions"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+
