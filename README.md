@@ -1,5 +1,4 @@
 # pproci
 
 Authors:
-Miguel Sancho Peña
-Jai Grover
+Miguel Sancho Peña & Jai Grover
